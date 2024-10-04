@@ -1,0 +1,2 @@
+export const superbaseUrl = 'https://gjechptbbsfmuqtfutdg.supabase.co';
+export const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdqZWNocHRiYnNmbXVxdGZ1dGRnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjcxOTczMTUsImV4cCI6MjA0Mjc3MzMxNX0.gRVDb9oDG7mYf5PimgILrPFnw0e__3BX_QYJ-5cbsbk';
