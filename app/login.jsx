@@ -75,13 +75,13 @@ const Login = () => {
                 Forgot Password?
             </Text>
 
-            <Button title={'Login'} loading={loading} onPress={onSubmit} />
+            <Button title={'Login'} testID="loginButton" loading={loading} onPress={onSubmit} />
 
             <View style={styles.footer}>
                 <Text style={styles.footerText}>
                     Don't have an account?
                 </Text>
-                <Pressable onPress={()=> router.push('signUp')}>
+                <Pressable testID="loginButton" onPress={()=> router.push('signUp')}>
                     <Text style={[styles.footerText, {color: theme.colors.primaryDark, fontWeight: theme.fonts.semibold}]}>Sign Up</Text>
                 </Pressable>
             </View>

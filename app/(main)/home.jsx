@@ -54,6 +54,7 @@ const Home = () => {
     }
 
     const handleNewNotification = async (payload)=>{
+        console.log('got new notification: ', payload);
         if(payload.eventType=='INSERT' && payload.new.id){
             setNotificationCount(prev=> prev+1);
         }

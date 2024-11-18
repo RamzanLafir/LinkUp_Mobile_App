@@ -13,7 +13,7 @@ const Welcome = () => {
 
   return (
     <ScreenWrapper bg="white">
-      <StatusBar style="dark" />
+      <StatusBar style="dark"/>
       <View style={styles.container}>
         <Image style={styles.welcomeImage} resizeMode='contain' source={require('../assets/images/welcome.png')} />
       
