@@ -1,23 +1,28 @@
-import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import ScreenWrapper from '../components/ScreenWrapper'
-import { hp, wp } from '../helpers/common'
-import { theme } from '../constants/theme'
-import Button from '../components/Button'
-import { useRouter } from 'expo-router'
-import { StatusBar } from 'expo-status-bar';
+// Import necessary modules and components
+import { Image, Pressable, StyleSheet, Text, View } from 'react-native'; // Core React Native components
+import React from 'react'; // React for components
+import ScreenWrapper from '../components/ScreenWrapper'; // Custom wrapper for consistent screen styling
+import { hp, wp } from '../helpers/common'; // Helper functions for responsive design
+import { theme } from '../constants/theme'; // Theme constants for styling
+import Button from '../components/Button'; // Custom button component
+import { useRouter } from 'expo-router'; // Router for navigation
+import { StatusBar } from 'expo-status-bar'; // Status bar from Expo
 
+
+// Welcome component definition
 const Welcome = () => {
 
-  const router = useRouter();
+  const router = useRouter(); // Router instance for navigation
 
   return (
+    // Screen wrapper for consistent background color and padding
     <ScreenWrapper bg="white">
-      <StatusBar style="dark"/>
+      <StatusBar style="dark"/> {/* Dark style for the status bar */}
       <View style={styles.container}>
+        {/* Welcome image */}
         <Image style={styles.welcomeImage} resizeMode='contain' source={require('../assets/images/welcome.png')} />
       
-
+        {/* Title and punchline */}
         <View style={{gap: 20}}>
           <Text style={styles.title}>LinkUp!</Text>
           <Text style={styles.punchline}>
@@ -25,12 +30,16 @@ const Welcome = () => {
           </Text>
         </View>
 
+        {/* Footer with buttons */}
         <View style={styles.footer}>
+          {/* Getting Started button */}
           <Button
             title="Getting Started"
             buttonStyle={{marginHorizontal: wp(3)}}
             onPress={()=> router.push('signUp')}
           />
+
+          {/* Login text with link */}
           <View style={styles.bottomTextContainer}>
             <Text style={styles.loginText}>
               Already have an account!
@@ -49,8 +58,9 @@ const Welcome = () => {
   )
 }
 
-export default Welcome
+export default Welcome // Export the Welcome component as the default export
 
+// Styles for the Welcome component
 const styles = StyleSheet.create({
     container: {
         flex: 1,
